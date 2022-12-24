@@ -1,0 +1,21 @@
+#Напишите программу с бесконечным циклом (с возможностью ввести букву 
+#, чтобы выйти) и списком чисел. При каждом переборе цикла предлагайте 
+#пользователю отгадать число из списка и сообщайте, правильно ли он отгадал.
+
+ii=[1,2,3,4,5,6,7,8,9,0]
+i=0
+while True:
+    print("Enter number for win/lose or X exit:")
+    g=input()
+    if g=='X':
+        print('Thank for game!')
+        break
+    try:
+        
+        if int(g)== ii[i]:
+            print("you win!")
+        else:
+            print('you lose(')
+        i=(i+1)%10
+    except ValueError:
+        print("Only number!!!")
